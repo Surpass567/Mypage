@@ -5,18 +5,18 @@
 const notesData = [
     {
         id: 1,
-        icon: "📘",
-        title: "HTML & CSS 基础",
+        icon: "🧠",
+        title: "智能计算系统",
         date: "2026-07-10",
-        desc: "HTML5语义化标签、CSS Flexbox/Grid布局、响应式设计核心知识。",
-        pdf: "Notes/SIC.pdf"   // 🔁 替换为你的PDF文件名
+        desc: "智能计算系统概述、AI芯片基础、深度学习计算框架、硬件加速原理",
+        pdf: "Notes/SIC.pdf"
     },
     {
         id: 2,
-        icon: "⚡",
-        title: "JavaScript 核心",
+        icon: "🤖",
+        title: "大模型先导课",
         date: "2026-07-15",
-        desc: "ES6+ 语法、DOM 操作、事件处理、异步编程 (Promise/async)。",
+        desc: "大语言模型发展历程",
         pdf: "Notes/LLM.pdf"
     }
 ];
