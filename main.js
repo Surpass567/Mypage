@@ -7,16 +7,16 @@ const notesData = [
         id: 1,
         icon: "🧠",
         title: "智能计算系统",
-        date: "2026-07-10",
-        desc: "智能计算系统概述、AI芯片基础、深度学习计算框架、硬件加速原理",
+        date: "2026-07-17",
+        desc: "更新至第二章",
         pdf: "Notes/SIC.pdf"
     },
     {
         id: 2,
         icon: "🤖",
         title: "大模型先导课",
-        date: "2026-07-15",
-        desc: "大语言模型发展历程",
+        date: "2026-07-17",
+        desc: "更新至第一章",
         pdf: "Notes/LLM.pdf"
     }
 ];
