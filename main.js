@@ -1,14 +1,10 @@
-// ============================================================
-// 📌 在这里填写你的笔记数据
-// ============================================================
-
 const notesData = [
     {
         id: 1,
         icon: "🧠",
         title: "智能计算系统",
         date: "2026-07-17",
-        desc: "更新至第二章",
+        desc: "更新至第三章",
         pdf: "Notes/SIC.pdf"
     },
     {
@@ -16,41 +12,34 @@ const notesData = [
         icon: "🤖",
         title: "大模型先导课",
         date: "2026-07-17",
-        desc: "更新至第一章",
+        desc: "更新至第二章",
         pdf: "Notes/LLM.pdf"
+    },
+    {
+        id: 3,
+        icon: "🔬",
+        title: "智能计算系统实验日志",
+        date: "2026-07-22",
+        desc: "更新至第二章",
+        pdf: "Notes/EXP.pdf"
     }
 ];
 
-// ============================================================
-// 🖥️ 渲染笔记卡片
-// ============================================================
+const grid = document.getElementById('notesGrid');
 
-function renderNotes() {
-    const grid = document.getElementById('notesGrid');
-    if (!grid) return;
+notesData.forEach((note, index) => {
+    const card = document.createElement('a');
+    card.className = 'note-card';
+    card.href = note.pdf;
+    card.target = '_blank';
+    card.style.animationDelay = `${index * 0.06}s`;
 
-    if (notesData.length === 0) {
-        grid.innerHTML = `
-            <div style="grid-column:1/-1;text-align:center;padding:60px 0;color:#718096;">
-                <p style="font-size:1.2rem;">📭 暂无笔记，请添加 <code>notesData</code> 数据</p>
-            </div>
-        `;
-        return;
-    }
+    card.innerHTML = `
+        <div class="icon">${note.icon}</div>
+        <h3>${note.title}</h3>
+        <div class="meta">📅 ${note.date}</div>
+        <p class="desc">${note.desc}</p>
+    `;
 
-    grid.innerHTML = notesData.map(note => `
-        <div class="note-card">
-            <div class="icon">${note.icon}</div>
-            <h3>${note.title}</h3>
-            <div class="date">📅 ${note.date}</div>
-            <p class="desc">${note.desc}</p>
-            <a href="${note.pdf}" class="btn" target="_blank">📄 查看 PDF</a>
-        </div>
-    `).join('');
-}
-
-// ============================================================
-// 🚀 页面加载后渲染
-// ============================================================
-
-document.addEventListener('DOMContentLoaded', renderNotes);
+    grid.appendChild(card);
+});
