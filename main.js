@@ -3,8 +3,8 @@ const notesData = [
         id: 1,
         icon: "🧠",
         title: "智能计算系统",
-        date: "2026-07-17",
-        desc: "更新至第三章",
+        date: "2026-08-03",
+        desc: "更新至第四章",
         pdf: "Notes/SIC.pdf"
     },
     {
